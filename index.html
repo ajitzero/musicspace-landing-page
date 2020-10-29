@@ -29,7 +29,7 @@
 <body>
 	<div class="relative bg-purple-1000">
 		<!-- News banner -->
-		<div id="news-banner" class="bg-green-600 fixed w-full bottom-0">
+		<div id="news-banner" class="bg-green-600 fixed w-full bottom-0 z-30">
 			<div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
 				<div class="flex items-center justify-between flex-wrap">
 					<div class="w-0 flex-1 flex items-center">
@@ -51,7 +51,6 @@
 					</div>
 					<div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
 						<button id="closeBtn" type="button" class="-mr-1 flex p-2 rounded-md hover:bg-green-500 focus:outline-none focus:bg-green-500 sm:-mr-2 transition ease-in-out duration-150" aria-label="Dismiss">
-							<!-- Heroicon name: x -->
 							<svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 							</svg>
@@ -69,13 +68,6 @@
 						<img class="h-8 w-auto sm:h-10" src="./logo.png" alt="Musicspace">
 					</a>
 				</div>
-				<!-- <div class="-mr-2 -my-2 hidden">
-					<button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-						<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-						</svg>
-					</button>
-				</div> -->
 				<nav class="flex space-x-5 lg:space-x-10 text-sm md:text-base">
 					<a href="#Features" class="hidden md:inline leading-6 font-medium text-purple-300 hover:text-purple-100 focus:outline-none focus:text-purple-100 transition ease-in-out duration-150">
 						Features
@@ -86,7 +78,7 @@
 					<a href="#Pricing" class="hidden md:inline leading-6 font-medium text-purple-300 hover:text-purple-100 focus:outline-none focus:text-purple-100 transition ease-in-out duration-150">
 						Pricing
 					</a>
-					<a href="https://musicspace.helpsite.com/" class="leading-6 font-medium text-purple-300 hover:text-purple-100 focus:outline-none focus:text-purple-100 transition ease-in-out duration-150">
+					<a href="https://musicspace.customerly.help/" class="leading-6 font-medium text-purple-300 hover:text-purple-100 focus:outline-none focus:text-purple-100 transition ease-in-out duration-150">
 						Support
 					</a>
 					<a href="#" onclick="alert('Will go to /login in main project')" class="md:hidden leading-6 font-medium text-purple-300 hover:text-purple-100 focus:outline-none focus:text-purple-100 transition ease-in-out duration-150">
@@ -106,8 +98,8 @@
 			</div>
 		</div>
 
-		<main class="overflow-x-hidden py-10 flex flex-wrap flex-col lg:flex-row max-w-full sm:py-12 px-6 lg:px-0 md:py-16 lg:py-20 xl:py-24">
-			<div class="sm:text-center lg:text-left w-full lg:w-7/12 px-4 lg:pl-32 lg:py-24">
+		<main class="overflow-x-hidden py-24 flex flex-wrap flex-col lg:flex-row max-w-full px-6 lg:px-0">
+			<div class="text-center lg:text-left w-full lg:w-7/12 px-4 lg:pl-32 lg:py-24">
 				<h2 class="text-4xl tracking-tight leading-10 font-extrabold text-purple-100 sm:text-5xl sm:leading-none md:text-6xl">
 					The easy way to <span class="text-pink-300">organize</span> and <span class="text-pink-400">protect</span> your entire music catalog,
 					<br class="xl:hidden">
@@ -303,304 +295,298 @@
 		</section>
 
 		<!-- Pricing -->
-		<section id="Pricing" class="container mx-auto flex flex-wrap flex-col lg:flex-row px-4 md:px-8 lg:px-12">
-			<div class="py-12 my-12">
-				<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="lg:text-center">
-						<p class="text-base leading-6 text-purple-400 font-semibold tracking-wide uppercase">Pricing</p>
-						<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
-							There's something for everyone
-						</h3>
-						<p class="mt-4 max-w-2xl text-xl leading-7 text-purple-200 lg:mx-auto">
-							Choose what suits your needs best. We grow as you grow!
-						</p>
-					</div>
+		<section id="Pricing" class="container mx-auto flex flex-wrap flex-col lg:flex-row px-8 lg:px-12">
+			<div class="lg:text-center mx-auto">
+				<p class="text-base leading-6 text-purple-400 font-semibold tracking-wide uppercase">Pricing</p>
+				<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+					There's something for everyone
+				</h3>
+				<p class="mt-4 max-w-2xl text-xl leading-7 text-purple-200 lg:mx-auto">
+					Choose what suits your needs best. We grow as you grow!
+				</p>
+			</div>
 
-					<div class="mt-16 pb-12 lg:mt-20">
-						<div class="relative z-0">
-							<div class="absolute inset-0 h-5/6 lg:h-2/3"></div>
-							<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-								<div class="relative lg:grid lg:grid-cols-10">
-									<div class="max-w-lg mx-auto lg:max-w-none lg:mx-0 lg:col-start-4 lg:col-end-8 lg:row-start-1 lg:row-end-4">
-										<div class="relative z-10 rounded-lg shadow-xl">
+			<div class="mt-16 pb-12 lg:mt-20">
+				<div class="relative z-0">
+					<div class="absolute inset-0 h-5/6 lg:h-2/3"></div>
+					<div class="max-w-full mx-auto md:px-4 lg:px-8">
+						<div class="relative lg:grid lg:grid-cols-10">
+							<div class="mx-auto max-w-full lg:mx-0 lg:col-start-4 lg:col-end-8 lg:row-start-1 lg:row-end-4">
+								<div class="relative z-10 rounded-lg shadow-xl">
+									<div>
+										<div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-purple-400"></div>
+										<div class="hidden absolute inset-x-0 top-0 transform translate-y-px">
+											<div class="flex justify-center transform -translate-y-1/2">
+												<span class="inline-flex rounded-full bg-purple-400 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
+													Recommended for Indie Artists
+												</span>
+											</div>
+										</div>
+										<div class="bg-white rounded-t-lg px-2 md:px-6 pt-12 pb-10">
+											<p class="text-center text-lg leading-7 font-semibold font-display text-purple-500 uppercase tracking-widest">
+												COVID19 Discount
+											</p>
+											<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900 sm:-mx-6">
+												Pro
+											</h2>
+											<div class="mt-4 flex items-center justify-center font-display">
+												<span class="text-right text-xl leading-9 font-semibold text-gray-400 tracking-wide line-through md:text-2xl md:leading-8">
+													$9.99
+												</span>
+												<span class="px-3 flex items-start text-4xl md:text-6xl leading-none tracking-tight font-bold md:font-medium text-gray-900">
+													<span class="mt-2 mr-1 text-2xl leading-none">
+														$
+													</span>
+													<span>
+														5.99
+													</span>
+												</span>
+												<span class="text-xl leading-5 md:text-2xl md:leading-6 font-semibold text-gray-400 tracking-wide">
+													USD<br>
+													<span class="text-sm leading-3">/month</span>
+												</span>
+											</div>
+										</div>
+										<div class="bg-gray-200 border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
+											<ul>
+												<li class="flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Store up to 30 releases
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Store unlimited milestones
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Access our Copyright Protection tool
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600 whitespace-no-wrap">
+														Free updates
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600 whitespace-no-wrap">
+														Premium Support
+													</p>
+												</li>
+											</ul>
+											<div class="mt-10">
+												<div class="rounded-lg shadow-md">
+													<a href="#" class="block w-full text-center rounded-lg bg-pink-600 px-6 py-4 text-xl leading-6 font-semibold font-display text-white hover:bg-pink-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+														Join Now
+													</a>
+												</div>
+												<p class="mt-6 text-center text-base leading-6 font-medium text-gray-900">
+													Want a trial run?
+													<a href="#" class="text-purple-500 font-semibold hover:underline">
+														Start free →
+													</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mt-6 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-3">
+								<div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-l-lg">
+									<div class="flex-1 flex flex-col">
+										<div class="bg-white px-6 pt-12 pb-10">
 											<div>
-												<div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-purple-400"></div>
-												<div class="absolute inset-x-0 top-0 transform translate-y-px">
-													<div class="flex justify-center transform -translate-y-1/2">
-														<span class="inline-flex rounded-full bg-purple-400 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
-															Recommended for Indie Artists
+												<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900">
+													Basic
+												</h2>
+												<div class="mt-4 flex items-center justify-center font-display">
+													<span class="px-3 flex items-start text-4xl md:text-6xl leading-none tracking-tight font-bold md:font-medium text-gray-900">
+														<span class="mt-2 mr-2 text-2xl md:text-4xl leading-none">
+															$
 														</span>
-													</div>
+														<span>
+															3.99
+														</span>
+													</span>
+													<span class="text-xl leading-5 font-semibold text-gray-400 tracking-wide">
+														USD<br>
+														<span class="text-sm leading-3">/month</span>
+													</span>
 												</div>
-												<div class="bg-white rounded-t-lg px-6 pt-12 pb-10">
-													<div>
-														<p class="text-center text-lg leading-7 font-semibold font-display text-purple-500 uppercase tracking-widest">
-															COVID19 Discount
-														</p>
-														<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900 sm:-mx-6">
-															Pro
-														</h2>
-														<div class="mt-4 flex items-center justify-center font-display">
-															<span class="-ml-8 text-right text-2xl leading-8 font-semibold text-gray-400 tracking-wide line-through sm:text-3xl sm:leading-9">
-																$9.99
-															</span>
-															<span class="px-3 flex items-start text-6xl leading-none tracking-tight font-medium text-gray-900 sm:text-7xl">
-																<span class="mt-2 mr-1 text-4xl leading-none sm:text-5xl">
-																	$
-																</span>
-																<span>
-																	5.99
-																</span>
-															</span>
-															<span class="text-3xl leading-9 md:text-2xl md:leading-6 font-semibold text-gray-400 tracking-wide">
-																USD<br>
-																<span class="text-sm leading-3">/month</span>
-															</span>
-														</div>
+											</div>
+										</div>
+										<div class="bg-gray-200 flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+											<ul>
+												<li class="flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
 													</div>
-												</div>
-												<div class="bg-gray-200 border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
-													<ul>
-														<li class="flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Store up to 30 releases
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Store unlimited milestones
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Access our Copyright Protection tool
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600 whitespace-no-wrap">
-																Free updates
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600 whitespace-no-wrap">
-																Premium Support
-															</p>
-														</li>
-													</ul>
-													<div class="mt-10">
-														<div class="rounded-lg shadow-md">
-															<a href="#" class="block w-full text-center rounded-lg bg-pink-600 px-6 py-4 text-xl leading-6 font-semibold font-display text-white hover:bg-pink-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
-																Join Now
-															</a>
-														</div>
-														<p class="mt-6 text-center text-base leading-6 font-medium text-gray-900">
-															Want a trial run?
-															<a href="#" class="text-purple-500 font-semibold hover:underline">
-																Start for free →
-															</a>
-														</p>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Store up to 10 releases
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
 													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Store unlimited milestones
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Access our Copyright Protection tool
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Free updates
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Premium Support
+													</p>
+												</li>
+											</ul>
+											<div class="mt-8">
+												<div class="rounded-lg shadow-md">
+													<a href="#" class="block w-full text-center rounded-lg bg-white px-6 py-3 text-base leading-6 font-semibold font-display text-purple-600 hover:text-purple-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+														Sign Up
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="mt-6 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-3">
-										<div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-l-lg">
-											<div class="flex-1 flex flex-col">
-												<div class="bg-white px-6 pt-12 pb-10">
-													<div>
-														<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900">
-															Basic
-														</h2>
-														<div class="mt-4 flex items-center justify-center font-display">
-															<span class="px-3 flex items-start text-6xl leading-none tracking-tight font-medium text-gray-900">
-																<span class="mt-2 mr-2 text-4xl">
-																	$
-																</span>
-																<span>
-																	3.99
-																</span>
-															</span>
-															<span class="text-2xl leading-6 font-semibold text-gray-400 tracking-wide">
-																USD<br>
-																<span class="text-sm leading-3">/month</span>
-															</span>
-														</div>
-													</div>
-												</div>
-												<div class="bg-gray-200 flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
-													<ul>
-														<li class="flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Store up to 10 releases
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Store unlimited milestones
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Access our Copyright Protection tool
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Free updates
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Premium Support
-															</p>
-														</li>
-													</ul>
-													<div class="mt-8">
-														<div class="rounded-lg shadow-md">
-															<a href="#" class="block w-full text-center rounded-lg bg-white px-6 py-3 text-base leading-6 font-semibold font-display text-purple-600 hover:text-purple-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
-																Sign Up
-															</a>
-														</div>
-													</div>
+								</div>
+							</div>
+							<div class="mt-6 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-8 lg:col-end-11 lg:row-start-2 lg:row-end-3">
+								<div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-r-lg">
+									<div class="flex-1 flex flex-col">
+										<div class="bg-white px-6 pt-12 pb-10">
+											<div>
+												<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900">
+													Elite
+												</h2>
+												<div class="mt-4 flex items-center justify-center font-display">
+													<span class="px-3 flex items-start text-4xl md:text-6xl leading-none tracking-tight font-bold md:font-medium text-gray-900">
+														<span class="mt-2 mr-2 text-2xl md:text-4xl leading-none">
+															$
+														</span>
+														<span>
+															12.99
+														</span>
+													</span>
+													<span class="text-xl leading-5 font-semibold text-gray-400 tracking-wide">
+														USD<br>
+														<span class="text-sm leading-3">/month</span>
+													</span>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="mt-6 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-8 lg:col-end-11 lg:row-start-2 lg:row-end-3">
-										<div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-r-lg">
-											<div class="flex-1 flex flex-col">
-												<div class="bg-white px-6 pt-12 pb-10">
-													<div>
-														<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900">
-															Elite
-														</h2>
-														<div class="mt-4 flex items-center justify-center font-display">
-															<span class="px-3 flex items-start text-6xl leading-none tracking-tight font-medium text-gray-900">
-																<span class="mt-2 mr-2 text-4xl">
-																	$
-																</span>
-																<span>
-																	12.99
-																</span>
-															</span>
-															<span class="text-2xl leading-6 font-semibold text-gray-400 tracking-wide">
-																USD<br>
-																<span class="text-sm leading-3">/month</span>
-															</span>
-														</div>
+										<div class="bg-gray-200 flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+											<ul>
+												<li class="flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
 													</div>
-												</div>
-												<div class="bg-gray-200 flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
-													<ul>
-														<li class="flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Store up to 100 releases
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Store unlimited milestones
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Access our Copyright Protection tool 
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Free updates
-															</p>
-														</li>
-														<li class="mt-4 flex items-start">
-															<div class="flex-shrink-0">
-																<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-																</svg>
-															</div>
-															<p class="ml-3 text-base leading-6 font-medium text-gray-600">
-																Premium Support
-															</p>
-														</li>
-													</ul>
-													<div class="mt-8">
-														<div class="rounded-lg shadow-md">
-															<a href="#" class="block w-full text-center rounded-lg bg-white px-6 py-3 text-base leading-6 font-semibold font-display text-purple-600 hover:text-purple-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
-																Sign Up
-															</a>
-														</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Store up to 100 releases
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
 													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Store unlimited milestones
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Access our Copyright Protection tool 
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Free updates
+													</p>
+												</li>
+												<li class="mt-4 flex items-start">
+													<div class="flex-shrink-0">
+														<svg class="h-6 w-6 text-purple-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+														</svg>
+													</div>
+													<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+														Premium Support
+													</p>
+												</li>
+											</ul>
+											<div class="mt-8">
+												<div class="rounded-lg shadow-md">
+													<a href="#" class="block w-full text-center rounded-lg bg-white px-6 py-3 text-base leading-6 font-semibold font-display text-purple-600 hover:text-purple-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+														Sign Up
+													</a>
 												</div>
 											</div>
 										</div>
