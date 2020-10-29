@@ -24,14 +24,30 @@
 			background: -webkit-linear-gradient(top, hsl(253, 43%, 10%) 3%, hsla(0, 0%, 0%, 0) 80%);
 			background: linear-gradient(to bottom, hsl(253, 43%, 10%) 3%, hsla(0, 0%, 0%, 0) 80%);
 		}
+		.bg-gradient {
+			background: #e14eca;
+			background-image: -webkit-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+			background-image: -o-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+			background-image: -moz-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+			background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+			background-size: 210% 210%;
+			background-position: top right;
+			background-color: #e14eca;
+			transition: all 0.15s ease;
+			box-shadow: none;
+			color: #ffffff;
+		}
+		.opacity-90 {
+			opacity: 0.9;
+		}
 	</style>
 </head>
-<body>
+<body class="bg-pink-500">
 	<div class="relative bg-purple-1000">
 		<!-- Navigation -->
 		<div class="w-full mx-auto fixed z-30 border-t-2 border-pink-600">
 			<!-- News banner -->
-			<div id="news-banner" class="bg-pink-600 w-full fixed bottom-0 z-40 sm:relative sm:bottom-auto">
+			<div id="news-banner" class="bg-pink-600 w-full fixed bottom-0 z-50 sm:relative sm:bottom-auto">
 				<div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
 					<div class="flex items-center justify-between flex-wrap">
 						<div class="w-0 flex-1 flex items-center">
@@ -101,7 +117,7 @@
 
 		<main class="overflow-x-hidden py-24 md:py-48 flex flex-wrap flex-col lg:flex-row max-w-full px-6 lg:px-0">
 			<div class="text-center lg:text-left w-full lg:w-7/12 px-4 lg:pl-32 lg:py-24">
-				<h2 class="text-4xl tracking-tight leading-10 font-extrabold text-purple-100 sm:text-5xl sm:leading-none md:text-6xl">
+				<h2 class="relative text-4xl tracking-tight leading-10 font-extrabold text-purple-100 sm:text-5xl sm:leading-none md:text-6xl z-10">
 					The easy way to <span class="text-pink-300">organize</span> and <span class="text-pink-400">protect</span> your entire music catalog,
 					<br class="xl:hidden">
 					<span class="text-pink-500">in minutes.</span>
@@ -122,7 +138,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-full lg:w-5/12 lg:-mt-2 py-6 lg:p-0">
+			<div class="w-full lg:w-5/12 lg:-mt-2 py-6 lg:p-0 z-0">
 				<img class="w-full lg:transform lg:scale-150 lg:ml-16" src="./hero-image.png">
 			</div>
 		</main>
@@ -624,13 +640,13 @@
 						<h2 class="text-3xl leading-9 font-extrabold tracking-tight text-pink-100 sm:text-4xl sm:leading-10">
 							Want even more?
 							<br>
-							<span class="text-pink-600">Try our truly Unlimited plan.</span>
+							<span class="text-pink-500">Try our truly Unlimited plan.</span>
 						</h2>
 						<p class="w-full md:w-2/3 text-base text-pink-100 leading-6 mt-5">
 							Store unlimited releases, unlimited milestones, unlimited free updates + access our Copyright Protection tool &amp; Premium Support.
 						</p>
 					</div>
-					<div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
+					<div class="my-8 flex lg:flex-shrink-0 lg:mt-0">
 						<div class="inline-flex rounded-md shadow">
 							<a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-pink-600 hover:bg-pink-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
 								Sign Up @ $29.99/month
@@ -641,11 +657,145 @@
 			</div>
 		</section>
 
-		<footer class="w-full py-12 px-4 md:py-16 md:px-8 text-center bg-gray-200 text-gray-700">
-			&copy; 2020 Musicspace. All rights reserved.
-			<a class="underline hover:text-gray-900" href="#">Privacy Policy</a>
-			&middot;
-			<a class="underline hover:text-gray-900" href="#">Terms &amp; Conditions</a>
+		<!-- Final CTA -->
+		<section class="container mx-auto flex flex-wrap flex-col lg:flex-row px-4 md:px-8 lg:px-12">
+			<div class="py-12 mt-32">
+				<div class="w-full lg:w-10/12 mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="lg:text-center">
+						<p class="text-base leading-6 text-purple-400 font-semibold tracking-wide uppercase">We are MusicSpace</p>
+						<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+							Join <span class="text-pink-200">500+</span> <span class="text-pink-300">artists</span>, <span class="text-pink-400">producers</span> and <span class="text-pink-500">labels</span> who use Musicspace to organize and protect their music catalogs
+						</h3>
+						<p class="mt-4 max-w-2xl text-xl leading-7 text-purple-200 lg:mx-auto">
+							Get started in under 5 minutes with our über smooth sign up process
+						</p>
+						<div class="mt-8 flex lg:flex-shrink-0 justify-center">
+							<div class="inline-flex rounded-md shadow">
+								<a href="#" class="inline-flex items-center justify-center px-6 py-4 border border-transparent text-xl leading-8 uppercase font-medium rounded-md text-white bg-gradient opacity-90 hover:opacity-100 focus:outline-none focus:shadow-outline transition duration-100 ease-in-out">
+									Sign Up
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="w-full mx-auto lg:w-2/3">
+				<img class="w-full" src="./hero-image-final-cta.png">
+			</div>
+		</section>
+
+		<footer id="TheEnd" class="w-full bg-indigo-800 text-indigo-200">
+			<div class="container mx-auto py-12 md:py-16 px-4 md:px-8">
+				<div class="sm:flex">
+					<div class="sm:w-1/3 sm:mt-0 mt-8 h-auto">
+						<div class="flex flex-col">
+							<a href="#" class="flex">
+								<img class="h-12 w-auto" src="./logo.png" alt="Musicspace">
+							</a>
+							<h5 class="py-4 text-xl font-semibold text-indigo-200">
+								Music Catalogs,
+								<br class="xl:hidden">
+								Made Easy.
+							</h5>
+						</div>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto">
+						<div class="mb-2 uppercase font-semibold text-indigo-100">MusicSpace</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Features
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Testimonials
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Pricing
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Features
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto">
+						<div class="mb-2 uppercase font-semibold text-indigo-100">Social</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://instagram.com/musicspaceio">
+									Instagram
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://twitter.com/musicspace_io">
+									Twitter
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://exciting-musician-2351.ck.page/a479fa1507">
+									Newsletter
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto">
+						<div class="mb-2 uppercase font-semibold text-indigo-100">Company</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://blog.musicspace.io/">
+									Blog
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Terms &amp; Conditions
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Press Kit
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto">
+						<div class="mb-2 uppercase font-semibold text-indigo-100">Support</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://musicspace.customerly.help/">
+									Knowledge Base
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="mailto:support@musicspace.io?subject=Hi%20I%20have%20a%20question&body=Hey%20there!%20I'm%20%3CYour%20name%20here%3E%20and%20I%20was%20wondering%20about%20%3Csomething%3E%20(feel%20free%20to%20delete%20all%20this!).">
+									Contact us
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="w-full py-12 md:py-16 text-sm text-center bg-indigo-900 border-b-8 border-pink-500">
+				&copy; Copyright 2020 Musicspace. All rights reserved.
+				<br>
+				<a class="underline hover:text-indigo-100" href="#">Privacy Policy</a>
+				&middot;
+				<a class="underline hover:text-indigo-100" href="#">Terms &amp; Conditions</a>
+				&middot;
+				<a class="underline hover:text-indigo-100" href="#">Press Kit</a>
+			</div>
 		</footer>
 	</div>
 
