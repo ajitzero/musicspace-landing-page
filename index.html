@@ -29,7 +29,7 @@
 <body>
 	<div class="relative bg-purple-1000">
 		<!-- Navigation -->
-		<div class="w-full mx-auto fixed z-30">
+		<div class="w-full mx-auto fixed z-30 border-t-2 border-pink-600">
 			<!-- News banner -->
 			<div id="news-banner" class="bg-pink-600 w-full fixed bottom-0 z-40 sm:relative sm:bottom-auto">
 				<div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
@@ -413,11 +413,24 @@
 															Join Now
 														</a>
 													</div>
-													<p class="mt-6 text-center text-base leading-6 font-medium text-gray-900">
-														Want a trial run?
-														<a href="#" class="text-purple-500 font-semibold hover:underline">
-															Start free →
-														</a>
+													<div class="mt-6 flex justify-center items-center text-base leading-5 font-medium text-gray-900">
+														<div id="freePlanHelp" class="mr-1 cursor-pointer transform hover:scale-125 transition ease-in-out duration-150">
+															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+																<circle cx="12" cy="12" r="10"></circle>
+																<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+																<line x1="12" y1="17" x2="12.01" y2="17"></line>
+															</svg>
+														</div>
+														<span class="">
+															Want a trial run?
+															<a href="#" class="text-purple-500 font-semibold hover:underline">
+																Start free →
+															</a>
+														</span>
+													</div>
+
+													<p id="freePlanMsg" class="hidden text-sm text-center text-gray-800 mt-2">
+														Sign-up and subscribe to our free plan to manage 3 tracks at no cost before you upgrade!
 													</p>
 												</div>
 											</div>
@@ -644,10 +657,16 @@
 
 	<script type="text/javascript">
 		const closeBtn = document.querySelector("#closeBtn");
+		const newsBanner = document.querySelector("#news-banner");
 		closeBtn.addEventListener("click", () => {
-			let newsBanner = document.querySelector("#news-banner");
 			newsBanner.parentNode.removeChild(newsBanner);
-		})
+		});
+
+		const freePlanHelp = document.querySelector("#freePlanHelp");
+		const freePlanMsg = document.querySelector("#freePlanMsg");
+		freePlanHelp.addEventListener("click", () => {
+			freePlanMsg.classList.toggle("hidden");
+		});
 	</script>
 </body>
 </html>
