@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Musicspace</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		.bg-gray-1000 {
+			background-color: #222;
+		}
+		.hover-bg-gray-1000:hover {
+			background-color: #222;
+		}
+		.border-gray-1000 {
+			border-color: #222;
+		}
+		.nav-gradient {
+			background-color: #222;
+			background: -moz-linear-gradient(top, #222 3%, hsla(0, 0%, 0%, 0) 80%);
+			background: -webkit-linear-gradient(top, #222 3%, hsla(0, 0%, 0%, 0) 80%);
+			background: linear-gradient(to bottom, #222 3%, hsla(0, 0%, 0%, 0) 80%);
+		}
+		.bg-gradient {
+			background: #444;
+			background-image: -webkit-linear-gradient(to bottom left, #444, #999, #444);
+			background-image: -o-linear-gradient(to bottom left, #444, #999, #444);
+			background-image: -moz-linear-gradient(to bottom left, #444, #999, #444);
+			background-image: linear-gradient(to bottom left, #444, #999, #444);
+			background-size: 210% 210%;
+			background-position: top right;
+			background-color: #444;
+			transition: all 0.15s ease;
+			box-shadow: none;
+			/* color: #ffffff; */
+		}
+		.opacity-90 {
+			opacity: 0.9;
+		}
+	</style>
+</head>
+<body class="bg-gray-500">
+	<div class="relative bg-gray-1000">
+		<!-- Navigation -->
+		<div class="w-full mx-auto fixed z-30 border-t-4 border-gray-600">
+			<!-- News banner -->
+			<div id="news-banner" class="bg-gray-600 w-full fixed bottom-0 z-50 sm:relative sm:bottom-auto">
+				<div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+					<div class="flex items-center justify-between flex-wrap">
+						<div class="w-0 flex-1 flex items-center">
+							<span class="flex p-2 rounded-lg bg-gray-800">
+								<svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+								</svg>
+							</span>
+							<p class="ml-3 font-medium text-white truncate">
+								<strong class="hidden md:inline">Big news!</strong> We're launching version 2!
+							</p>
+						</div>
+						<div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+							<div class="rounded-md shadow-sm">
+								<a href="#" class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-600 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+									Read the blog post
+								</a>
+							</div>
+						</div>
+						<div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+							<button id="closeBtn" type="button" class="-mr-1 flex p-2 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500 sm:-mr-2 transition ease-in-out duration-150" aria-label="Dismiss">
+								<svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Logo | Nav | CTA -->
+			<div class="flex justify-between items-center py-6 px-4 md:px-6 md:justify-start md:space-x-5 lg:space-x-10 nav-gradient">
+				<div class="lg:w-0 flex flex-1">
+					<a href="#" class="flex">
+						<img class="h-8 w-auto sm:h-10" src="./logo.png" alt="Musicspace">
+					</a>
+				</div>
+				<nav class="flex space-x-5 lg:space-x-10 text-sm md:text-base">
+					<a href="#Features" class="hidden md:inline leading-6 font-medium text-gray-300 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
+						Features
+					</a>
+					<a href="#Testimonials" class="hidden md:inline leading-6 font-medium text-gray-300 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
+						Testimonials
+					</a>
+					<a href="#Pricing" class="hidden md:inline leading-6 font-medium text-gray-300 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
+						Pricing
+					</a>
+					<a href="https://musicspace.customerly.help/" class="leading-6 font-medium text-gray-300 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
+						Support
+					</a>
+					<a href="#" onclick="alert('Will go to /login in main project')" class="md:hidden leading-6 font-medium text-gray-300 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
+						Log in
+					</a>
+				</nav>
+				<div class="hidden md:flex items-center justify-end space-x-5 lg:space-x-10 md:flex-1 lg:w-0">
+					<a href="#" onclick="alert('Will go to /login in main project')" class="whitespace-no-wrap text-base leading-6 font-medium text-gray-300 hover:text-gray-100 focus:outline-none focus:text-gray-100">
+						Log in
+					</a>
+					<span class="inline-flex rounded-md shadow-sm">
+						<a href="#" class="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 hover:text-gray-100 focus:outline-none focus:border-white focus:shadow-outline-gray active:bg-gray-100 transition ease-in-out duration-150">
+							Sign Up
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<main class="overflow-x-hidden py-24 md:py-48 flex flex-wrap flex-col lg:flex-row max-w-full px-6 lg:px-0">
+			<div class="text-center lg:text-left w-full lg:w-7/12 px-4 lg:pl-32 lg:py-24">
+				<h2 class="relative text-4xl tracking-tight leading-10 font-extrabold text-gray-100 sm:text-5xl sm:leading-none md:text-6xl z-10">
+					The easy way to <span class="text-gray-300">organize</span> and <span class="text-gray-400">protect</span> your entire music catalog,
+					<br class="lg:hidden">
+					<span class="text-gray-500">in minutes.</span>
+				</h2>
+				<p class="mt-3 text-base text-gray-100 sm:mt-5 sm:text-lg sm:max-w-md sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+					Gone are the days of organizing your catalog in spreadsheets and cloud storage platforms. Keep all of your metadata centralized in one beautiful dashboard.
+				</p>
+				<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+					<div class="rounded-md shadow">
+						<a href="#" onclick="alert('Will go to /sign-up in main project')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 tracking-tight font-medium uppercase rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray transition duration-150 ease-in-out md:py-4 md:px-10">
+							Get started
+						</a>
+					</div>
+					<div class="mt-3 sm:mt-0 sm:ml-3 lg:z-20">
+						<a href="#Features" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium uppercase rounded-md text-gray-700 bg-gray-100 hover:text-gray-600 hover:bg-gray-50 focus:outline-none focus:shadow-outline-gray focus:border-gray-300 transition duration-150 ease-in-out md:py-4 md:px-10">
+							Learn More
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="w-full lg:w-5/12 mt-8 lg:mt-24 py-6 lg:p-0 z-0">
+				<img class="w-full transform scale-105 lg:scale-125 lg:ml-8" src="./hero-image.png">
+			</div>
+		</main>
+
+		<!-- Features -->
+		<section id="Features" class="container mx-auto flex flex-wrap flex-col lg:flex-row px-4 md:px-8 lg:px-12">
+			<div class="py-12 my-12">
+				<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="lg:text-center">
+						<p class="text-base leading-6 text-gray-400 font-semibold tracking-wide uppercase">Features</p>
+						<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+							Manage your music effortlessly
+						</h3>
+						<p class="mt-4 max-w-2xl text-xl leading-7 text-gray-200 lg:mx-auto">
+							Musicspace allows artists to finally take control of organizing their most valuable assets: their music catalogs.
+						</p>
+					</div>
+
+					<div class="my-8 space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-16">
+						<a href="https://www.youtube.com/watch?v=U2M2juKk6i4" class="flex items-start hover-bg-gray-1000 transition ease-in-out duration-300 rounded-md p-4 border-2 border-gray-1000 hover:border-gray-400">
+							<div class="flex-shrink-0">
+								<span class="h-10 w-10 pt-0.5 bg-gray-400 flex items-center justify-center rounded-full text-lg leading-10 font-display font-bold text-white">1</span>
+							</div>
+							<div class="ml-4">
+								<p class="text-lg leading-6 font-medium text-white">Metadata Organization</p>
+								<p class="mt-1 lg:mt-2 max-w-xl text-base leading-6 text-gray-200">
+									Store track files (WAV's/MP3's), lyrics, collaborator info, publishing info, cover arts, genres, bpm's, moods, track notes and more.
+								</p>
+								<p class="mt-2 lg:mt-4 text-base leading-6 text-gray-100 font-semibold tracking-wide">Learn More →</p>
+							</div>
+						</a>
+						<a href="https://www.loom.com/share/11208b56ed5a44739b94a3dc2306f845" class="flex items-start hover-bg-gray-1000 transition ease-in-out duration-300 rounded-md p-4 border-2 border-gray-1000 hover:border-gray-400">
+							<div class="flex-shrink-0">
+								<span class="h-10 w-10 pt-0.5 bg-gray-400 flex items-center justify-center rounded-full text-lg leading-10 font-display font-bold text-white">2</span>
+							</div>
+							<div class="ml-4">
+								<p class="text-lg leading-6 font-medium text-white">Copyright Protection</p>
+								<p class="mt-1 lg:mt-2 max-w-xl text-base leading-6 text-gray-200">
+									Use our built-in tool, Musicspace Protect, to protect track files, lyrics and creative images you own in seconds.
+								</p>
+								<p class="mt-2 lg:mt-4 text-base leading-6 text-gray-100 font-semibold tracking-wide">Learn More →</p>
+							</div>
+						</a>
+						<a href="https://musicspace.customerly.help/milestones/how-to-add-a-milestone" class="flex items-start hover-bg-gray-1000 transition ease-in-out duration-300 rounded-md p-4 border-2 border-gray-1000 hover:border-gray-400">
+							<div class="flex-shrink-0">
+								<span class="h-10 w-10 pt-0.5 bg-gray-400 flex items-center justify-center rounded-full text-lg leading-10 font-display font-bold text-white">3</span>
+							</div>
+							<div class="ml-4">
+								<p class="text-lg leading-6 font-medium text-white">Milestones</p>
+								<p class="mt-1 lg:mt-2 max-w-xl text-base leading-6 text-gray-200">
+									Never forget an important career milestone ever again. Milestones allow you to track every important moment in a timeline view for you to look back on.
+								</p>
+								<p class="mt-2 lg:mt-4 text-base leading-6 text-gray-100 font-semibold tracking-wide">Learn More →</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="text-center mt-24 mb-4">
+						<h3 class="text-white rounded-full inline text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+							This is how <span class="text-gray-400">your catalog</span> could look
+						</h3>
+					</div>
+					<img class="w-full" src="./features_screenshot.png" alt="Features">
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials -->
+		<section id="Testimonials" class="container mx-auto flex flex-wrap flex-col lg:flex-row px-4 md:px-8 lg:px-12">
+			<div class="py-12 my-12">
+				<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="lg:text-center">
+						<p class="text-base leading-6 text-gray-400 font-semibold tracking-wide uppercase">Testimonials</p>
+						<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+							Here's what artist's have to say:
+						</h3>
+						<p class="mt-4 max-w-2xl text-xl leading-7 text-gray-200 lg:mx-auto">
+							No matter the type of music you create, we’d love to have you join 500+ amazing musicians!
+						</p>
+					</div>
+
+					<div class="mt-10">
+						<ul class="md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+							<li class="bg-gray-100 rounded-md p-6 shadow-2xl">
+								<div class="flex flex-col">
+									<div class="mb-4">
+										<p class="text-lg md:text-2xl leading-6 font-light text-gray-600">
+											<span class="text-gray-900">MusicSpace is truly amazing if you ask me.</span> It's a one stop shop for my catalogs metadata plus the copyright service is just the icing on the cake. Keeps everything organized for me and also keeps my music protected. Literally. Also shout out to the customer service, never had any issues with them. Fast response time and you can tell they're passionate about they're service they offer.
+										</p>
+									</div>
+									<div class="flex items-center">
+										<div class="flex-shrink-0 h-12 w-12">
+											<img class="h-12 w-12 rounded-full" src="./OHJD.jpg" alt="OHJD">
+										</div>
+										<a href="https://www.instagram.com/ohjd_" class="ml-4">
+											<div class="text-base leading-6 font-medium text-gray-900">
+												OHJD
+											</div>
+											<div class="text-base leading-6 text-gray-500">
+												Songwriter &amp; Producer
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="mt-10 md:mt-0 bg-gray-100 rounded-md p-6 shadow-2xl">
+								<div class="flex flex-col">
+									<div class="mb-4">
+										<p class="text-lg md:text-2xl leading-6 font-light text-gray-600">
+											<span class="text-gray-900">I think it is extremely useful</span> for us artists to have one place to store all of our music without having to open multiple applications and sites to find the information we need. There have been many times where I will need to type of the lyrics of my songs on multiple occasions or find my ISRC codes through my distributors and it would be much more convenient to be able to access all of it with one joined profile.
+										</p>
+									</div>
+									<div class="flex items-center">
+										<div class="flex-shrink-0 h-12 w-12">
+											<img class="h-12 w-12 rounded-full" src="./Carolena.jpg" alt="Carolena">
+										</div>
+										<a href="https://www.instagram.com/carolenamusic/" class="ml-4">
+											<div class="text-base leading-6 font-medium text-gray-900">
+												Carolena
+											</div>
+											<div class="text-base leading-6 text-gray-500">
+												Songwriter
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="mt-10 md:mt-0 bg-gray-100 rounded-md p-6 shadow-2xl">
+								<div class="flex flex-col">
+									<div class="mb-4">
+										<p class="text-lg md:text-2xl leading-6 font-light text-gray-600">
+											<span class="text-gray-900">Speedy responses and open to all questions and concerns.</span> I REALLY LOVE THIS PLATFORM and how it is putting control back into artists hands with there special features and organization tools. Thank you!
+										</p>
+									</div>
+									<div class="flex items-center">
+										<div class="flex-shrink-0 h-12 w-12">
+											<img class="h-12 w-12 rounded-full" src="./Tye_Talley.jpg" alt="Tye Talley">
+										</div>
+										<a href="https://www.instagram.com/tye_talley" class="ml-4">
+											<div class="text-base leading-6 font-medium text-gray-900">
+												Tye Talley
+											</div>
+											<div class="text-base leading-6 text-gray-500">
+												Songwriter
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="mt-10 md:mt-0 bg-gray-100 rounded-md p-6 shadow-2xl">
+								<div class="flex flex-col">
+									<div class="mb-4">
+										<p class="text-lg md:text-2xl leading-6 font-light text-gray-600">
+											<span class="text-gray-900">It boggles my mind</span> how many things independent musicians need to keep track of constantly. It's super helpful to be able to keep all the metadata for my tracks in one place, easily accessible together with album art and everything else I need.
+										</p>
+									</div>
+									<div class="flex items-center">
+										<div class="flex-shrink-0 h-12 w-12">
+											<img class="h-12 w-12 rounded-full" src="./YUUNGEN.jpg" alt="YUUNGEN">
+										</div>
+										<a href="https://www.instagram.com/yuugen_music/" class="ml-4">
+											<div class="text-base leading-6 font-medium text-gray-900">
+												YUUNGEN
+											</div>
+											<div class="text-base leading-6 text-gray-500">
+												Songwriter
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pricing -->
+		<section id="Pricing" class="container mx-auto flex flex-wrap flex-col lg:flex-row px-8 lg:px-12">
+			<div class="py-12 my-12">
+				<div class="lg:text-center mx-auto">
+					<p class="text-base leading-6 text-gray-400 font-semibold tracking-wide uppercase">Pricing</p>
+					<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+						Pricing to suit any budget
+					</h3>
+					<p class="mt-4 max-w-2xl text-xl leading-7 text-gray-200 lg:mx-auto">
+						Whether you have 3 tracks to manage or 30,000, we have a plan for you
+					</p>
+				</div>
+
+				<div class="mt-16 pb-12 lg:mt-20">
+					<div class="relative z-0">
+						<div class="absolute inset-0 h-5/6 lg:h-2/3"></div>
+						<div class="max-w-full mx-auto md:px-4 lg:px-8">
+							<div class="relative lg:grid lg:grid-cols-10">
+								<div class="mx-auto max-w-full lg:mx-0 lg:col-start-4 lg:col-end-8 lg:row-start-1 lg:row-end-4">
+									<div class="relative z-10 rounded-lg shadow-xl">
+										<div>
+											<div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-gray-400"></div>
+											<div class="absolute inset-x-0 top-0 transform translate-y-px text-center">
+												<div class="flex justify-center transform -translate-y-1/2">
+													<span class="inline-flex rounded-full bg-gray-400 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
+														Indie Starter Pack 🔥
+													</span>
+												</div>
+											</div>
+											<div class="bg-white rounded-t-lg px-2 md:px-6 pt-12 pb-10">
+												<p class="text-center text-lg leading-7 font-semibold font-display text-gray-500 uppercase tracking-widest">
+													COVID19 Discount
+												</p>
+												<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900 sm:-mx-6">
+													Pro
+												</h2>
+												<div class="mt-4 flex items-center justify-center font-display">
+													<span class="text-right text-xl leading-9 font-semibold text-gray-400 tracking-wide line-through md:text-2xl md:leading-8">
+														$9.99
+													</span>
+													<span class="px-3 flex items-start text-4xl md:text-6xl leading-none tracking-tight font-bold md:font-medium text-gray-900">
+														<span class="mt-2 mr-1 text-2xl leading-none">
+															$
+														</span>
+														<span>
+															5.99
+														</span>
+													</span>
+													<span class="text-xl leading-5 md:text-2xl md:leading-6 font-semibold text-gray-400 tracking-wide">
+														USD<br>
+														<span class="text-sm leading-3">/month</span>
+													</span>
+												</div>
+											</div>
+											<div class="bg-gray-200 border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
+												<ul>
+													<li class="flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Store up to 30 releases
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Store unlimited milestones
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Access our Copyright Protection tool
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600 whitespace-no-wrap">
+															Free updates
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600 whitespace-no-wrap">
+															Premium Support
+														</p>
+													</li>
+												</ul>
+												<div class="mt-10">
+													<div class="rounded-lg shadow-md">
+														<a href="#" class="block w-full text-center rounded-lg px-6 py-4 text-xl leading-6 font-semibold font-display text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+															Join Now
+														</a>
+													</div>
+													<div class="mt-6 flex justify-center items-center text-base leading-5 font-medium text-gray-900">
+														<div id="freePlanHelp" class="mr-1 cursor-pointer transform hover:scale-125 transition ease-in-out duration-150">
+															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+																<circle cx="12" cy="12" r="10"></circle>
+																<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+																<line x1="12" y1="17" x2="12.01" y2="17"></line>
+															</svg>
+														</div>
+														<span class="">
+															Want a trial run?
+															<a href="#" class="text-gray-500 font-semibold hover:underline">
+																Start free →
+															</a>
+														</span>
+													</div>
+
+													<p id="freePlanMsg" class="hidden text-sm text-center text-gray-800 mt-2">
+														Sign-up and subscribe to our free plan to manage 3 tracks at no cost before you upgrade!
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mt-6 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-3">
+									<div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-l-lg">
+										<div class="flex-1 flex flex-col">
+											<div class="bg-white px-6 pt-12 pb-10">
+												<div>
+													<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900">
+														Basic
+													</h2>
+													<div class="mt-4 flex items-center justify-center font-display">
+														<span class="px-3 flex items-start text-4xl md:text-6xl leading-none tracking-tight font-bold md:font-medium text-gray-900">
+															<span class="mt-2 mr-2 text-2xl md:text-4xl leading-none">
+																$
+															</span>
+															<span>
+																3.99
+															</span>
+														</span>
+														<span class="text-xl leading-5 font-semibold text-gray-400 tracking-wide">
+															USD<br>
+															<span class="text-sm leading-3">/month</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="bg-gray-200 flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+												<ul>
+													<li class="flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Store up to 10 releases
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Store unlimited milestones
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Access our Copyright Protection tool
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Free updates
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Premium Support
+														</p>
+													</li>
+												</ul>
+												<div class="mt-8">
+													<div class="rounded-lg shadow-md">
+														<a href="#" class="block w-full text-center rounded-lg bg-white px-6 py-3 text-base leading-6 font-semibold font-display text-gray-600 hover:text-gray-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+															Sign Up
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mt-6 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-8 lg:col-end-11 lg:row-start-2 lg:row-end-3">
+									<div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-r-lg">
+										<div class="flex-1 flex flex-col">
+											<div class="bg-white px-6 pt-12 pb-10">
+												<div>
+													<h2 class="mt-2 text-center text-3xl leading-9 font-semibold font-display text-gray-900">
+														Elite
+													</h2>
+													<div class="mt-4 flex items-center justify-center font-display">
+														<span class="px-3 flex items-start text-4xl md:text-6xl leading-none tracking-tight font-bold md:font-medium text-gray-900">
+															<span class="mt-2 mr-2 text-2xl md:text-4xl leading-none">
+																$
+															</span>
+															<span>
+																12.99
+															</span>
+														</span>
+														<span class="text-xl leading-5 font-semibold text-gray-400 tracking-wide">
+															USD<br>
+															<span class="text-sm leading-3">/month</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="bg-gray-200 flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+												<ul>
+													<li class="flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Store up to 100 releases
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Store unlimited milestones
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Access our Copyright Protection tool
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Free updates
+														</p>
+													</li>
+													<li class="mt-4 flex items-start">
+														<div class="flex-shrink-0">
+															<svg class="h-6 w-6 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+															</svg>
+														</div>
+														<p class="ml-3 text-base leading-6 font-medium text-gray-600">
+															Premium Support
+														</p>
+													</li>
+												</ul>
+												<div class="mt-8">
+													<div class="rounded-lg shadow-md">
+														<a href="#" class="block w-full text-center rounded-lg bg-white px-6 py-3 text-base leading-6 font-semibold font-display text-gray-600 hover:text-gray-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+															Sign Up
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- We want MOOOAAAARR! -->
+				<div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:p-16 lg:flex lg:items-center lg:justify-between border-2 border-gray-600 rounded-lg">
+					<div>
+						<h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-100 sm:text-4xl sm:leading-10">
+							Want even more?
+							<br>
+							<span class="text-gray-500">Try our truly Unlimited plan.</span>
+						</h2>
+						<p class="w-full md:w-2/3 text-base text-gray-100 leading-6 mt-5">
+							Store unlimited releases, unlimited milestones, unlimited free updates + access our Copyright Protection tool &amp; Premium Support.
+						</p>
+					</div>
+					<div class="my-8 flex lg:flex-shrink-0">
+						<div class="inline-flex rounded-md shadow">
+							<a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+								Sign Up @ $29.99/month
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Final CTA -->
+		<section class="container mx-auto flex flex-wrap flex-col lg:flex-row px-4 md:px-8 lg:px-12">
+			<div class="py-12 mt-32">
+				<div class="w-full lg:w-10/12 mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="lg:text-center">
+						<p class="text-base leading-6 text-gray-400 font-semibold tracking-wide uppercase">We are MusicSpace</p>
+						<h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+							Join <span class="text-gray-200">500+</span> <span class="text-gray-300">artists</span>, <span class="text-gray-400">producers</span> and <span class="text-gray-500">labels</span> who use Musicspace to organize and protect their music catalogs
+						</h3>
+						<p class="mt-4 max-w-2xl text-xl leading-7 text-gray-200 lg:mx-auto">
+							Get started in under 5 minutes with our über smooth sign up process
+						</p>
+						<div class="mt-8 flex lg:flex-shrink-0 justify-center">
+							<div class="inline-flex rounded-md shadow">
+								<a href="#" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-xl leading-8 uppercase font-medium rounded-md text-white bg-gradient opacity-90 hover:opacity-100 transform hover:scale-105 focus:outline-none focus:shadow-outline transition duration-100 ease-in-out">
+									Sign Up
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="w-full mx-auto lg:w-2/3">
+				<img class="w-full" src="./hero-image-final-cta.png">
+			</div>
+		</section>
+
+		<footer id="TheEnd" class="w-full bg-gray-800 text-gray-200">
+			<div class="container mx-auto py-12 md:py-16 px-4 md:px-8">
+				<div class="sm:flex">
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto text-center md:text-right">
+						<div class="mb-2 uppercase font-semibold text-gray-100">Social</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://instagram.com/musicspaceio">
+									Instagram
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://twitter.com/musicspace_io">
+									Twitter
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://exciting-musician-2351.ck.page/a479fa1507">
+									Newsletter
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto text-center md:text-right">
+						<div class="mb-2 uppercase font-semibold text-gray-100">MusicSpace</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Features
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Testimonials
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Pricing
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Features
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sm:w-1/3 sm:mt-0 mt-8 h-auto">
+						<div class="flex flex-col items-center">
+							<a href="#" class="flex">
+								<img class="h-12 w-auto" src="./logo.png" alt="Musicspace">
+							</a>
+							<h5 class="py-4 text-xl font-semibold text-gray-200">
+								Music Catalogs,
+								<br class="lg:hidden">
+								Made Easy.
+							</h5>
+							<a class="mb-4 md:px-2 lg:max-w-xs" href="https://www.producthunt.com/posts/musicspace">
+								<img class="w-full h-auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=177056&theme=dark" alt="Musicspace - The simple way for musicians to manage their music catalog | Product Hunt" />
+							</a>
+						</div>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto text-center md:text-left">
+						<div class="mb-2 uppercase font-semibold text-gray-100">Company</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://blog.musicspace.io/">
+									Blog
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Terms &amp; Conditions
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="#">
+									Press Kit
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-8 sm:mt-0 sm:w-2/12 h-auto text-center md:text-left">
+						<div class="mb-2 uppercase font-semibold text-gray-100">Support</div>
+						<ul>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="https://musicspace.customerly.help/">
+									Knowledge Base
+								</a>
+							</li>
+							<li>
+								<a class="block w-full py-1 hover:text-white hover:underline" href="mailto:support@musicspace.io?subject=Hi%20I%20have%20a%20question&body=Hey%20there!%20I'm%20%3CYour%20name%20here%3E%20and%20I%20was%20wondering%20about%20%3Csomething%3E%20(feel%20free%20to%20delete%20all%20this!).">
+									Contact us
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="w-full py-12 md:py-16 px-8 text-sm text-center bg-gray-900">
+				&copy; Copyright 2020 Musicspace.
+				<br class="md:hidden">
+				All rights reserved.
+				<br>
+				<a class="underline hover:text-gray-100" href="#">Privacy Policy</a>
+				&middot;
+				<a class="underline hover:text-gray-100" href="#">Terms &amp; Conditions</a>
+				&middot;
+				<a class="underline hover:text-gray-100" href="#">Press Kit</a>
+			</div>
+		</footer>
+	</div>
+
+	<script type="text/javascript">
+		const closeBtn = document.querySelector("#closeBtn");
+		const newsBanner = document.querySelector("#news-banner");
+		closeBtn.addEventListener("click", () => {
+			newsBanner.parentNode.removeChild(newsBanner);
+		});
+
+		const freePlanHelp = document.querySelector("#freePlanHelp");
+		const freePlanMsg = document.querySelector("#freePlanMsg");
+		freePlanHelp.addEventListener("click", () => {
+			freePlanMsg.classList.toggle("hidden");
+		});
+	</script>
+</body>
+</html>
