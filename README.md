@@ -2,5 +2,5 @@
 
 New landing page for Musicspace v2.0 🙌
 
-[Live Demo](https://musicspace.ajitpanigrahi.com)
-| [Grayscale version (for A11y testing)](https://musicspace.ajitpanigrahi.com/bw)
+[Live Demo](https://ajitzero.github.io/musicspace-landing-page/)
+| [Grayscale version (for A11y testing)](https://ajitzero.github.io/musicspace-landing-page/bw)
